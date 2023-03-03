@@ -33,11 +33,11 @@ public:
 
 		int x = total(i+1,v,diff);
 		int y = v[i] + total(i+1,v,diff+v[i]);
-		int z = total(i+1,v,a,diff-v[i]);
+		int z = total(i+1,v,diff-v[i]);
 
 		return max({x,y,z});
 	}
 	int tallestBillboard(vector<int>& rods) {
-		return total(0,rods,0,0);
+		return total(0,rods,0);
 	}
 };
