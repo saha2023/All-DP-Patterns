@@ -28,12 +28,12 @@ public:
 			if(diff == 0){
 				return 0;
 			}
-		    return -1e9;
+			return -1e9;
 		}
 
 		int x = total(i+1,v,diff);
 		int y = v[i] + total(i+1,v,diff+v[i]);
-		int z = total(i+1,v,a,diff);
+		int z = total(i+1,v,a,diff-v[i]);
 
 		return max({x,y,z});
 	}
